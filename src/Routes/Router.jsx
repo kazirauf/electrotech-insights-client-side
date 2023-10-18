@@ -5,6 +5,7 @@ import Root from "../Layout/Root";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import MyCart from "../Pages/MyCart/MyCart";
 import Register from "../Pages/Register/Register";
+import ErrorPage from "../Pages/ErrorPage/ErrorPAge";
 
 
 
@@ -14,6 +15,7 @@ const router =  createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
           {
             path: "/",
