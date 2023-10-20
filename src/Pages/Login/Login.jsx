@@ -46,7 +46,7 @@ const Login = () => {
 
     return (
         <div>
-         <div className="hero min-h-[800px] bg-base-200">
+         <div className="hero min-h-[800px] ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
     

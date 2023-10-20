@@ -1,15 +1,17 @@
+import Swal from 'sweetalert2'
+
 const AddProduct = () => {
     const handleAddProduct = (event) => {
     event.preventDefault()
       const form = event.target;
       const photo = form.image.value;
       const name = form.name.value;
-      const band = form.bandName.value;
+      const band_name = form.bandName.value;
       const productTypes = form.types.value;
       const price = form.price.value;
       const productRating = form.rating.value;
       const productDescription = form.description.value;
-      const product = {photo, name, band, productTypes, price, productRating, productDescription}
+      const product = {photo, name, band_name, productTypes, price, productRating, productDescription}
       console.log(product);
 
       fetch(`http://localhost:5000/addProducts`, {
@@ -22,6 +24,14 @@ const AddProduct = () => {
       .then(res => res.json())
       .then(data => {
         console.log(data);
+        if(data.insertedId) {
+          Swal.fire({
+            title: 'success!',
+            text: 'product added successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+        }
       })
 
     }
@@ -60,16 +70,23 @@ const AddProduct = () => {
                 required
               />
             </div>
-            <div>
-              <h3 className="font-bold text-xl mb-5">Brand Name</h3>
-              <input
-                type="text"
-                name="bandName"
-                placeholder="your product brand name"
-                className="input input-bordered text-black input-accent w-full"
-                required
-              />
-            </div>
+            <label>
+                <h3 className="font-bold text-xl mb-5">
+                Brand Name
+                </h3>
+                <select
+                  className="input input-bordered  input-accent w-full text-black"
+                  name="bandName"
+                >
+                  <option value="Apple">Apple</option>
+                  <option value="Google">Google</option>
+                  <option value="Samsung">Samsung</option>
+                  <option value="Intel">Intel</option>
+                  <option value="Sony">Sony</option>
+                  
+                </select>
+              </label>
+         
           </div>
           <div>
             <div>
@@ -91,6 +108,7 @@ const AddProduct = () => {
                   <option value="Sony tv">Sony tv</option>
                   <option value="phone">Phone</option>
                   <option value="Google product">Google product</option>
+                  <option value="Headphones">Headphones</option>
                 </select>
               </label>
             </div>
