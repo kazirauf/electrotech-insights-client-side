@@ -9,6 +9,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPAge";
 import PrivateRoute from "./PrivateRoute";
 import BandProducts from "../Pages/BandProducts/BandProducts";
 import BandProjuctDetails from "../Pages/BandProducts/BandProjuctDetails";
+import UpdateProducts from "../Pages/UpdateProducts/UpdateProducts";
 
 
 
@@ -39,7 +40,8 @@ const router =  createBrowserRouter([
           },
           {
             path: "/myCart",
-            element: <MyCart></MyCart>
+            element: <MyCart></MyCart>,
+            loader: () => fetch("http://localhost:5000/cartProducts")
           },
           {
             path: "/bands/:brand",
@@ -51,8 +53,12 @@ const router =  createBrowserRouter([
             element: <BandProjuctDetails></BandProjuctDetails>,
             loader: ({params}) => fetch(`http://localhost:5000/addProducts/${params.id}`)
           
-          }
-         
+          },
+         {
+            path: "/updateProducts/:id",
+            element: <UpdateProducts></UpdateProducts>,
+            loader: ({params}) => fetch(`http://localhost:5000/addProducts/${params.id}`)
+         }
         ]
     }
 ])

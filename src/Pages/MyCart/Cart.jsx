@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
-const ProductsCard = ({product}) => {
-    const { _id,  image_url, name, rating, Price, band_name, type} = product;
+
+const Cart = ({cart}) => {
+    const { _id,  image_url, name, rating, Price, band_name, type} = cart;
+    
     return (
         <div>
      
@@ -14,8 +16,8 @@ const ProductsCard = ({product}) => {
     <p className="lg:text-lg font-bold">Type: {type}</p>
     <p className="lg:text-lg font-bold">Rating: {rating}</p>
     <div className="card-actions justify-end">
-      <Link to={`/productDetails/${_id}`} className="btn bg-emerald-500 text-white font-bold">Details</Link>
-      <Link to={`/updateProducts/${_id}`} className="btn bg-emerald-500 text-white font-bold ">Update</Link>
+      <Link to={`/productDetails/${_id}`} className="btn bg-red-500 text-white font-bold">Details Cart</Link>
+     
     </div>
   </div>
 </div>
@@ -23,4 +25,4 @@ const ProductsCard = ({product}) => {
     );
 };
 
-export default ProductsCard;
+export default Cart;

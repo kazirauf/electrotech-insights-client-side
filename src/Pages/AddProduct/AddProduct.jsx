@@ -4,14 +4,14 @@ const AddProduct = () => {
     const handleAddProduct = (event) => {
     event.preventDefault()
       const form = event.target;
-      const photo = form.image.value;
+      const image_url = form.image.value;
       const name = form.name.value;
       const band_name = form.bandName.value;
-      const productTypes = form.types.value;
-      const price = form.price.value;
-      const productRating = form.rating.value;
-      const productDescription = form.description.value;
-      const product = {photo, name, band_name, productTypes, price, productRating, productDescription}
+      const types = form.types.value;
+      const Price = form.price.value;
+      const rating = form.rating.value;
+      const details = form.description.value;
+      const product = {image_url, name, band_name, types, Price, rating, details}
       console.log(product);
 
       fetch(`http://localhost:5000/addProducts`, {
