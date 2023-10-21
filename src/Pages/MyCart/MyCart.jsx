@@ -23,7 +23,7 @@ const MyCart = () => {
          if (result.isConfirmed) {
        
 
-         fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/cartProducts/${_id}`, {
+         fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/cartProducts/${_id}`, {
              method: "DELETE"
             
          })

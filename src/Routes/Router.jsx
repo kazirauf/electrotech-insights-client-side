@@ -24,7 +24,7 @@ const router =  createBrowserRouter([
           {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch("https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/bands")
+            loader: () => fetch("https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/bands")
           },
           {
             path: "/login",
@@ -41,23 +41,23 @@ const router =  createBrowserRouter([
           {
             path: "/myCart",
             element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-            loader: () => fetch("https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/cartProducts")
+            loader: () => fetch("https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/cartProducts")
           },
           {
             path: "/bands/:brand",
             element: <BandProducts></BandProducts>,
-            loader: ({params}) => fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/brands/${params.brand}`)
+            loader: ({params}) => fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/brands/${params.brand}`)
           },
           {
             path: "productDetails/:id",
             element: <PrivateRoute> <BandProjuctDetails></BandProjuctDetails></PrivateRoute>,
-            loader: ({params}) => fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/addProducts/${params.id}`)
+            loader: ({params}) => fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/addProducts/${params.id}`)
           
           },
          {
             path: "/updateProducts/:id",
             element: <PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
-            loader: ({params}) => fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/addProducts/${params.id}`)
+            loader: ({params}) => fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/addProducts/${params.id}`)
          }
         ]
     }

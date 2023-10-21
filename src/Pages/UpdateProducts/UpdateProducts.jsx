@@ -19,7 +19,7 @@ const UpdateProducts = () => {
           const updateProduct = {image_url, name, band_name, types, Price, rating, details}
           
     
-          fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/addProducts/${_id}`, {
+          fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/addProducts/${_id}`, {
              method: 'PUT',
              headers: {
                 'content-type': 'application/json'
