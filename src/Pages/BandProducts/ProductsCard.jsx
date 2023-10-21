@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Shared/Navbar/NAvbar";
 
 const ProductsCard = ({product}) => {
     const { _id,  image_url, name, rating, Price, band_name, types} = product;
+
+   
     return (
         <div>
 

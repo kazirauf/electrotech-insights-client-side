@@ -44,11 +44,11 @@ const MyCart = () => {
        })
  }
     return (
-        <div>
+        <div className="h-[1000px]">
             <Navbar></Navbar>
      
     {
-        myCart.map(c => <div key={c._id}>
+        myCart.map(c => <div className="grid lg:grid-cols-2 grid-cols-1 py-20" key={c._id}>
                 <div className="card card-side bg-base-100 shadow-xl border-emerald-500 border ">
           <figure><img className="h-52 lg:w-72" src={c.image_url} alt="Movie"/></figure>
           <div className="card-body">
