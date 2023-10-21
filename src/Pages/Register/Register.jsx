@@ -4,6 +4,8 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from "../Shared/Navbar/NAvbar";
+
 const Register = () => {
     const {signInWithProvider, createUser} = useContext(AuthContext)
 
@@ -80,6 +82,7 @@ const Register = () => {
 
     return (
         <div>
+           <Navbar></Navbar>
         <div className="hero min-h-[800px] bg-base-200">
  <div className="hero-content flex-col lg:flex-row-reverse">
    <div className="text-center lg:text-left">

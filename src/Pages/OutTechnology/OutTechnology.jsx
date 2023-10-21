@@ -2,7 +2,7 @@
 const OutTechnology = () => {
     return (
         <div>
-            <div className="hero min-h-[700px] bg-base-200 my-20">
+            <div className="hero min-h-[700px]  my-20">
   <div className="hero-content flex-col lg:flex-row-reverse gap-20">
     <img src="https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=612x612&w=0&k=20&c=HYlIJ1VFfmHPwGkM3DtVIFNLS5ejfMMzEQ81ko534ak=" className="lg:max-w-3xl rounded-lg shadow-2xl" />
     <div>

@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import Navbar from '../Shared/Navbar/NAvbar';
 
 const AddProduct = () => {
     const handleAddProduct = (event) => {
@@ -29,14 +30,16 @@ const AddProduct = () => {
             title: 'success!',
             text: 'product added successfully',
             icon: 'success',
-            confirmButtonText: 'Cool'
+            confirmButtonText: 'Done'
           })
         }
       })
 
     }
   return (
-    <div
+  <div>
+    <Navbar></Navbar>
+      <div
       className=""
       style={{
         backgroundImage:
@@ -109,6 +112,9 @@ const AddProduct = () => {
                   <option value="phone">Phone</option>
                   <option value="Google product">Google product</option>
                   <option value="Headphones">Headphones</option>
+                  <option value="Headphones">Apple Product</option>
+                  <option value="Headphones">Sony Products</option>
+                  <option value="Headphones">Watch</option>
                 </select>
               </label>
             </div>
@@ -153,6 +159,7 @@ const AddProduct = () => {
       </form>
      </div>
     </div>
+  </div>
   );
 };
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../Providers/AuthProviders";
+import Navbar from "../Shared/Navbar/NAvbar";
 const Login = () => {
   const {signIn, signInWithProvider} = useContext(AuthContext)
   const handleLogin = e => {
@@ -46,6 +47,7 @@ const Login = () => {
 
     return (
         <div>
+          <Navbar></Navbar>
          <div className="hero min-h-[800px] ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">

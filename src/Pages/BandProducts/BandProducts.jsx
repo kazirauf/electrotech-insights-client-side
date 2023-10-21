@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ProductsCard from "./ProductsCard";
+import Navbar from "../Shared/Navbar/NAvbar";
+
 
 const BandProducts = () => {
     const bandProducts = useLoaderData();
@@ -7,6 +9,7 @@ const BandProducts = () => {
     console.log(bandProducts);
     return (
        <div>
+   <Navbar></Navbar>
        <div className="carousel w-full h-[800px]">
   <div id="slide1" className="carousel-item relative w-full hero hero-overlay bg-opacity-60">
     <img src="https://afpbb.ismcdn.jp/mwimgs/7/2/1000x/img_72f333ea9b6cae887d9c2c982a45f16c77306.jpg" className="w-full h-[800px]" />
@@ -37,6 +40,11 @@ const BandProducts = () => {
         <div className="flex justify-center">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 py-20">
             {
+                bandProducts.length === 0 ? 
+               <div>
+                 <h1 className="text-4xl font-bold text-center text-red-500 flex justify-center">There are no products in this brand</h1>
+               </div>
+                :
                 bandProducts.map(product => <ProductsCard product={product} key={product.id}></ProductsCard>)
 
             }

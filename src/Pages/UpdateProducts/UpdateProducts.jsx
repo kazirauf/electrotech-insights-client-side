@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Navbar from "../Shared/Navbar/NAvbar";
 
 const UpdateProducts = () => {
     const product = useLoaderData()
@@ -40,7 +41,9 @@ const UpdateProducts = () => {
     
         }
       return (
-        <div
+     <div>
+      <Navbar></Navbar>
+         <div
           className=""
           style={{
             backgroundImage:
@@ -164,6 +167,7 @@ const UpdateProducts = () => {
           </form>
          </div>
         </div>
+     </div>
       );
 };
 
