@@ -78,6 +78,14 @@ const Home = () => {
      
      </div>
      </div>
+     <div className="hidden lg:flex text-white" >
+   {
+                    user ?
+                        <button onClick={handleLogOut} className="text-white bg-green-500 rounded-lg border-0 btn lg:text-lg text-xs lg:h-full">Sign Out</button>
+                        :
+                        <button className="text-white bg-green-500 rounded-lg border-0 btn"><NavLink to="/login">Login</NavLink></button>
+                }
+   </div>
     
         {links}
       </ul>
@@ -111,12 +119,14 @@ const Home = () => {
       : 
       <img className="w-12 rounded-full mr-3 border-2 border-emerald-500" src="https://as1.ftcdn.net/v2/jpg/03/53/11/00/1000_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg" alt="" />
     }
-      {
+   <div className="hidden lg:flex">
+   {
                     user ?
                         <button onClick={handleLogOut} className="text-white bg-green-500 rounded-lg border-0 btn lg:text-lg text-xs lg:h-full">Sign Out</button>
                         :
                         <button className="text-white bg-green-500 rounded-lg border-0 btn"><NavLink to="/login">Login</NavLink></button>
                 }
+   </div>
    
   </div>
 </div>

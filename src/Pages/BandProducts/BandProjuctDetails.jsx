@@ -7,7 +7,7 @@ const BandProjuctDetails = () => {
   console.log(productsDetails);
     const handleLogDetails = () => {
         console.log(productsDetails);
-        fetch(`http://localhost:5000/cartProducts`, {
+        fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/cartProducts`, {
           method: 'POST',
           headers: {
              'content-type': 'application/json'

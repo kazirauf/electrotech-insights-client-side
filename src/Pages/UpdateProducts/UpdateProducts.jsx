@@ -19,7 +19,7 @@ const UpdateProducts = () => {
           const updateProduct = {image_url, name, band_name, types, Price, rating, details}
           
     
-          fetch(`http://localhost:5000/addProducts/${_id}`, {
+          fetch(`https://my-assignment-10-server-8gfrfphd9-kazirauf.vercel.app/addProducts/${_id}`, {
              method: 'PUT',
              headers: {
                 'content-type': 'application/json'
@@ -161,7 +161,7 @@ const UpdateProducts = () => {
     
             <div className="px-20 mt-5 mb-10">
               <button className="btn bg-emerald-500 text-white font-bold w-full">
-                Update Product
+                Submit
               </button>
             </div>
           </form>
