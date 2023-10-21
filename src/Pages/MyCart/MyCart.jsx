@@ -55,7 +55,7 @@ const MyCart = () => {
             <h2 className="lg:card-title">{c.name}</h2>
             <p className="lg:text-lg font-bold">Brand: {c.band_name}</p>
             <p className="lg:text-lg font-bold">Price ${c.Price}</p>
-            <p className="lg:text-lg font-bold">Type: {c.type}</p>
+            <p className="lg:text-lg font-bold">Type: {c.types}</p>
             <p className="lg:text-lg font-bold">Rating: {c.rating}</p>
             <div className="card-actions justify-end">
               <button onClick={() => handleDelete(c._id)} className="btn bg-red-500 text-white font-bold">Delete Cart</button>
