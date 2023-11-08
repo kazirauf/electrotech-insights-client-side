@@ -5,28 +5,7 @@ import Navbar from "../Shared/Navbar/NAvbar";
 const BandProjuctDetails = () => {
   const productsDetails = useLoaderData();
   console.log(productsDetails);
-    const handleLogDetails = () => {
-        console.log(productsDetails);
-        fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/cartProducts`, {
-          method: 'POST',
-          headers: {
-             'content-type': 'application/json'
-          },
-          body: JSON.stringify(productsDetails)
-       })
-       .then(res => res.json())
-       .then(data => {
-         console.log(data);
-         if(data.insertedId) {
-           Swal.fire({
-             title: 'success!',
-             text: 'product add in the cart successfully',
-             icon: 'success',
-             confirmButtonText: 'Done'
-           })
-         }
-       })
-    }
++
 
     return (
       <div>
