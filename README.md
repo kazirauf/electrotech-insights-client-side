@@ -8,6 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Live Site: https://electrotech-insights.web.app
+## Server Side Repo: https://github.com/kazirauf/electrotech-insights-server-side
 
 #6  features or functionalities of my project:
 
